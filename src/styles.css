@@ -1,4 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+.main-container {
+  margin-top: 20px;
+}
+
+body {
+  padding-bottom: 50px;
+}
 
 .animated {
     -webkit-animation-duration: 1s;
