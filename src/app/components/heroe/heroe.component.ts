@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Heroe, HeroesService } from '../../services/heroes.service';
 
 @Component({
@@ -20,10 +20,11 @@ export class HeroeComponent implements OnInit {
 
     this.activatedRoute.params.subscribe( params => {      
       
-      this.heroe = this.heroesService.getHeroe(params['id']);
-      console.log(this.heroe);
+      this.heroe = this.heroesService.getHeroe(params['id']);     
       
     });
   }
+
+
 
 }
