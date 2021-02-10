@@ -25,8 +25,8 @@ export class BuscarHeroesComponent implements OnInit {
     });
   }
 
-  verHeroe( idx: number) {
-    this.router.navigate(['heroe', idx]);
-  }
+  // verHeroe( idx: number) {
+  //   this.router.navigate(['heroe', idx]);
+  // }
 
 }
