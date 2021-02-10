@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class BuscarHeroesComponent implements OnInit {
 
   arrBusqueda: Heroe[] = [];
+  termino: string;
 
   constructor( private heroesService: HeroesService,
                 private activatedRoute: ActivatedRoute,
@@ -19,8 +20,8 @@ export class BuscarHeroesComponent implements OnInit {
 
     this.activatedRoute.params.subscribe( params => {
 
-      this.arrBusqueda = this.heroesService.buscarHeroes( params.termino );
-      // console.log(this.arrBusqueda);      
+      this.arrBusqueda = this.heroesService.buscarHeroes( params['termino'] );
+      this.termino = params['termino'];      
     });
   }
 
