@@ -11,6 +11,10 @@
 
 <div class="card-columns animated fadeIn">
     
-    <app-heroe-tarjeta *ngFor="let heroe of arrBusqueda; let i = index" [heroe]="heroe" [index]="i"></app-heroe-tarjeta>
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)"
+
+        *ngFor="let heroe of arrBusqueda" [heroe]="heroe" [index]="heroe.idx">
+
+    </app-heroe-tarjeta>
 
 </div>

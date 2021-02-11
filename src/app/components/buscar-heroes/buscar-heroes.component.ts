@@ -21,12 +21,14 @@ export class BuscarHeroesComponent implements OnInit {
     this.activatedRoute.params.subscribe( params => {
 
       this.arrBusqueda = this.heroesService.buscarHeroes( params['termino'] );
-      this.termino = params['termino'];      
+      this.termino = params['termino'];
+      console.log(this.arrBusqueda);
+            
     });
   }
 
-  // verHeroe( idx: number) {
-  //   this.router.navigate(['heroe', idx]);
-  // }
+  verHeroe( idx: number) {
+    this.router.navigate(['heroe', idx]);
+  }
 
 }
