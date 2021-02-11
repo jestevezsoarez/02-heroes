@@ -10,6 +10,7 @@ import { HeroesService, Heroe } from '../../services/heroes.service';
 export class HeroesComponent implements OnInit {
 
   heroes: Heroe[];
+  //idx: number;
 
   constructor( private _heroesService: HeroesService,
                 private router: Router ) { }
@@ -18,5 +19,11 @@ export class HeroesComponent implements OnInit {
 
     this.heroes = this._heroesService.getHeroes();    
     
+  }
+
+  verHeroe(idx: number) {
+    console.log(idx);
+    
+    this.router.navigate(['heroe', idx]);
   }
 }
